@@ -89,6 +89,7 @@ const Navbar = () => {
                 ["About Us", "/about"],
                 ["Contact Us", "/contact"],
                 ["Profile", "/profile"],
+                ["Video Chat", "/call"],
               ].map(([title, url], index) => (
                 <Link
                   key={title}

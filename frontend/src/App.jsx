@@ -7,6 +7,7 @@ import Home from './components/Home/home';
 import Doctor from './components/Doctor/Doctor';
 import Contact from './components/contact/Contact';
 import AboutUs from './components/aboutus/AboutUs';
+import VideoCall from './components/video-call';
 
 
 
@@ -30,6 +31,7 @@ useEffect(() => {
         <Route path="/doctor" element={<Doctor />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/call" element={<VideoCall />} />
       </Routes>
     </div>
   )
