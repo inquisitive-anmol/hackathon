@@ -25,8 +25,7 @@ useEffect(() => {
   return (
     <div>
        <Header />
-      <Routes>
-
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/doctor" element={<Doctor />} />
         <Route path="/contact" element={<Contact />} />
