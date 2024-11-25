@@ -1,3 +1,12 @@
+
+import React from "react";
+
+const App = () => {
+  return <div>App</div>;
+};
+
+export default App;
+=======
 import React, { useEffect } from 'react'
 import { Route, Routes } from "react-router-dom";
 import webFont from "webfontloader";
