@@ -5,10 +5,18 @@ const {
   validateWebhookSignature,
 } = require("razorpay/dist/utils/razorpay-utils");
 
-let rzpInstance = new razorpay({
-  key_id: process.env.RAZORPAY_API_KEY,
-  key_secret: process.env.RAZORPAY_SECRET_KEY,
-});
+let rzpInstance;
+try {
+  console.log("API Key:", process.env.RAZORPAY_API_KEY); // Debug log
+  console.log("Secret Key:", process.env.RAZORPAY_SECRET_KEY ? "Present" : "Missing"); // Debug log
+
+  rzpInstance = new razorpay({
+    key_id: process.env.RAZORPAY_API_KEY,
+    key_secret: process.env.RAZORPAY_SECRET_KEY,
+  });
+} catch (error) {
+  console.error("Razorpay initialization error:", error);
+}
 
 exports.processPayment = catchAsyncErrors(async (req, res, next) => {
   const myPayment = await rzpInstance.orders.create({
