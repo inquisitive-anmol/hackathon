@@ -31,7 +31,6 @@ const home = () => {
           <img src="./illustration.svg" className="" alt="" />
         </div>
       </div>
-      <AboutUs />
     </>
   );
 };
