@@ -40,13 +40,13 @@ const Navbar = () => {
       });
 
       // Menu items stagger animation
-    //   gsap.from('.menu-item', {
-    //     y: -20,
-    //     opacity: 0,
-    //     duration: 0.5,
-    //     stagger: 0.1,
-    //     delay: 0.5,
-    //   });
+      //   gsap.from('.menu-item', {
+      //     y: -20,
+      //     opacity: 0,
+      //     duration: 0.5,
+      //     stagger: 0.1,
+      //     delay: 0.5,
+      //   });
     });
 
     // Cleanup
@@ -85,10 +85,13 @@ const Navbar = () => {
               {[
                 ["Home", "/"],
                 ["Find a doctor", "/doctor"],
-                ["Testimonials", "/testimonials"],
+                ["Services", "/services"],
                 ["About Us", "/about"],
                 ["Contact Us", "/contact"],
-                ["Profile", "/profile"],
+                [
+                  `${false ? "Profile" : "Login"}`,
+                  `${false ? "/profile" : "/login"}`,
+                ],
               ].map(([title, url], index) => (
                 <Link
                   key={title}

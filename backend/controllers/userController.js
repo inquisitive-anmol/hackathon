@@ -11,26 +11,26 @@ const cloudinary = require("cloudinary");
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
   const { name, email, password } = req.body;
 
-  let myCloud = {};
-  if (req.body.avatar === "undefined") {
-    myCloud.public_id = "no id";
-    myCloud.secure_url = "no url";
-  } else {
-    myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
-      folder: "avatars",
-      width: 150,
-      crop: "scale",
-    });
-  }
+  // let myCloud = {};
+  // if (req.body.avatar === "undefined") {
+  //   myCloud.public_id = "no id";
+  //   myCloud.secure_url = "no url";
+  // } else {
+  //   myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
+  //     folder: "avatars",
+  //     width: 150,
+  //     crop: "scale",
+  //   });
+  // }
   const user = await User.create({
     ...req.body,
     name,
     email,
     password,
-    avatar: {
-      public_id: myCloud.public_id,
-      url: myCloud.secure_url,
-    },
+    // avatar: {
+    //   public_id: myCloud.public_id,
+    //   url: myCloud.secure_url,
+    // },
   });
 
   sendToken(user, 200, res);
@@ -39,7 +39,7 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
 // User Login
 exports.loginUser = catchAsyncErrors(async (req, res, next) => {
   const { email, password } = req.body;
-
+console.log("request recieved!!");
   // checking if user have given email and password both
   if (!email || !password) {
     return next(new ErrorHandler("Please Enter Email & Password", 404));

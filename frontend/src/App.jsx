@@ -1,12 +1,5 @@
 
-import React from "react";
 
-const App = () => {
-  return <div>App</div>;
-};
-
-export default App;
-=======
 import React, { useEffect } from 'react'
 import { Route, Routes } from "react-router-dom";
 import webFont from "webfontloader";
@@ -14,7 +7,8 @@ import Header from './components/layout/Header';
 import Home from './components/Home/home';
 import Doctor from './components/Doctor/Doctor';
 import Contact from './components/contact/Contact';
-
+import Services from './components/Services/Services';
+import Login from './components/User/Login';
 
 
 
@@ -38,6 +32,8 @@ useEffect(() => {
         <Route path="/" element={<Home />} />
         <Route path="/doctor" element={<Doctor />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/login" element={<Login />} /> 
       </Routes>
     </div>
   )
