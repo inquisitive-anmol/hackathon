@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription Template</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .header .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header .logo .stethoscope {
+            height: 80%;
+        }
+
+        .patient-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .patient-info div {
+            width: 48%;
+        }
+
+        .prescription {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design: Media Queries */
+        @media (max-width: 850px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header .logo {
+                margin-top: 10px;
+            }
+
+            .patient-info {
+                flex-direction: column;
+            }
+
+            .patient-info div {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .signature {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h2 {
+                font-size: 20px;
+            }
+
+            .header .logo {
+                width: 60px;
+                height: 60px;
+                font-size: 18px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .prescription {
+                padding: 15px;
+            }
+
+            .footer {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Dr. Doctor Name</h2>
+            <div class="logo">
+                <img src="./doctor-svgrepo-com.svg" class="stethoscope">
+            </div>
+        </div>
+
+        <div class="patient-info">
+            <div>
+                <p>Patient Name:</p>
+                <p>Age:</p>
+                <p>Diagnosis:</p>
+            </div>
+            <div>
+                <p>Date:</p>
+                <p>Gender:</p>
+                <p>Weight:</p>
+            </div>
+        </div>
+
+        <div class="prescription">
+            <h3>Rx</h3>
+            <p>Prescription details go here...</p>
+        </div>
+
+        <div class="signature">
+            <p>Signature</p>
+        </div>
+
+        <div class="footer">
+            <p>Clinic Name | 24 Dummy Street Area | +12-345 678 9012</p>
+        </div>
+    </div>
+</body>
+
+</html>
