@@ -1,5 +1,8 @@
 import React from "react";
 import Doctor from "../Doctor/Doctor";
+import Login from "../login/Login";
+import Contact from "../contact/Contact";
+import AboutUs from "../aboutus/AboutUs";
 
 const home = () => {
   return (
@@ -28,6 +31,7 @@ const home = () => {
           <img src="./illustration.svg" className="" alt="" />
         </div>
       </div>
+      <AboutUs />
     </>
   );
 };
