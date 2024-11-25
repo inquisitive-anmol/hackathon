@@ -11,7 +11,13 @@ const VideoCall = () => {
     EndCall: () => setVideoCall(false),
   };
   return videoCall ? (
-    <div style={{ display: "flex", width: "100vw", height: "100vh" }}>
+    <div
+      style={{
+        display: "flex",
+        width: "100vw",
+        height: "100vh",
+      }}
+    >
       <AgoraUIKit rtcProps={rtcProps} callbacks={callbacks} />
     </div>
   ) : (
